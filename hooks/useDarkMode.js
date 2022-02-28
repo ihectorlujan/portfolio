@@ -14,7 +14,7 @@ const useDarkMode = () => {
       : document.documentElement.classList.remove("dark")
   }, [dark])
 
-  return [toggle]
+  return [dark, toggle]
 }
 
 export default useDarkMode

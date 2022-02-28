@@ -1,6 +1,9 @@
 const Navbar = (props) => {
   return (
-    <nav className="bg-slate-100 dark:bg-slate-900 dark:text-white h-10">
+    <nav
+      className="flex flex-row justify-evenly items-center
+    bg-fountain-blue dark:bg-slate-900 dark:text-white h-14"
+    >
       {props.children}
     </nav>
   )
