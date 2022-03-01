@@ -1,6 +1,6 @@
 const SectionContainer = (props) => {
   return (
-    <div className="flex flex-row justify-evenly items-center w-1/2">
+    <div className="hidden sm:flex sm:flex-row sm:justify-evenly sm:items-center sm:w-1/2">
       {props.children}
     </div>
   )
