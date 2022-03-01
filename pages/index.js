@@ -1,4 +1,3 @@
-import { useState } from "react"
 import Navbar from "../components/Navbar"
 import useDarkMode from "../hooks/useDarkMode"
 import SectionContainer from "../components/SectionContainer"
@@ -8,6 +7,8 @@ import IconMenu from "../components/IconMenu"
 import MobileMenu from "../components/MobileMenu"
 import MobileElement from "../components/MobileElement"
 import useDisplay from "../hooks/useDisplay"
+import Section from "../components/Section"
+import SectiionTwo from "../components/SectiionTwo"
 
 export default function Home() {
   const [dark, toggle] = useDarkMode()
@@ -40,6 +41,9 @@ export default function Home() {
         <MobileElement>Skills</MobileElement>
         <MobileElement>Contact</MobileElement>
       </MobileMenu>
+
+      <Section></Section>
+      <SectiionTwo></SectiionTwo>
     </>
   )
 }
