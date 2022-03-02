@@ -58,7 +58,7 @@ export default function Home() {
 
       <Section id="home">
         <SectionContainer>
-          <h1 className="text-6xl">¡Hey...! I`&apos;`m Hector Lujan</h1>
+          <h1 className="text-6xl">¡Hey...! I&apos;m Hector Lujan</h1>
           <h1 className="p-4 text-sky-600 hover:font-bold">
             Frontend Junior Developer
           </h1>
@@ -143,7 +143,7 @@ export default function Home() {
                   <div></div>
                 </div>
                 <h1 className="text-slate-600 dark:text-slate-300 pt-2">
-                  Aserradero de `&quot;`Cordon Grande`&quot;` •{" "}
+                  Aserradero de &quot;Cordon Grande&quot; •{" "}
                   <small className="font-bold">Septiembre 2018</small>
                 </h1>
                 <small className="text-slate-600 dark:text-slate-300">
