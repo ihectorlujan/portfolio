@@ -10,6 +10,7 @@ module.exports = {
         "fountain-blue": "#54BAB9",
         "desert-storm": "#FBF8F1",
         "antique-white": "#F7ECDE",
+        bone: "#E9DAC1",
       },
     },
   },

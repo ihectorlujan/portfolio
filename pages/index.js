@@ -12,6 +12,7 @@ import SectiionTwo from "../components/SectiionTwo"
 import MainContainer from "../components/MainContainer"
 import SectionContainer from "../components/SectionContainer"
 import useWord from "../hooks/useWord"
+import Card from "../components/Card"
 
 export default function Home() {
   const [dark, toggle] = useDarkMode()
@@ -25,7 +26,7 @@ export default function Home() {
         <SectionMenu>
           <SectionName href="#home">Inicio</SectionName>
           <SectionName href="#about">Sobre mi</SectionName>
-          <SectionName>Habilidades</SectionName>
+          <SectionName href="#skills">Habilidades</SectionName>
           <SectionName>Proyectos</SectionName>
           <SectionName>Contacto</SectionName>
         </SectionMenu>
@@ -144,6 +145,33 @@ export default function Home() {
           </div>
         </SectionContainer>
       </SectiionTwo>
+
+      <Section id="skills">
+        <SectionContainer>
+          <h1 className="text-2xl font-bold py-4">Skills:</h1>
+          <div className="grid grid-cols-10 gap-y-10 gap-x-5">
+            <Card src="./javascript.svg" label="JavaScript" />
+            <Card src="./typescript-icon.svg" label="TypeScript" />
+            <Card src="./nodejs-icon.svg" label="Node.js" />
+            <Card src="./git-icon.svg" label="Git" />
+            <Card src="./css-3.svg" label="CSS3" />
+            <Card src="./html-5.svg" label="HTML5" />
+            <Card src="./react.svg" label="React" />
+            <Card src="./redux.svg" label="Redux" />
+            <Card src="./react-router.svg" label="React Router" />
+            <Card src="./nextjs.svg" label="Next.js" />
+            <Card src="./tailwindcss-icon.svg" label="Tailwind CSS" />
+            <Card src="./postman-icon.svg" label="Postman" />
+            <Card src="./graphql.svg" label="GraphQL" />
+            <Card src="./postgresql.svg" label="PostgreSQL" />
+            <Card src="./mysql-icon.svg" label="MySQL" />
+            <Card src="./bootstrap.svg" label="Bootstrap" />
+            <Card src="./java.svg" label="Java" />
+            <Card src="./linux-tux.svg" label="Linux" />
+            <Card src="./terminal.svg" label="Terminal" />
+          </div>
+        </SectionContainer>
+      </Section>
     </MainContainer>
   )
 }
