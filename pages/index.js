@@ -9,6 +9,7 @@ import MobileElement from "../components/MobileElement"
 import useDisplay from "../hooks/useDisplay"
 import Section from "../components/Section"
 import SectiionTwo from "../components/SectiionTwo"
+import SectionThree from "../components/SectionThree"
 import MainContainer from "../components/MainContainer"
 import SectionContainer from "../components/SectionContainer"
 import useWord from "../hooks/useWord"
@@ -27,8 +28,8 @@ export default function Home() {
           <SectionName href="#home">Inicio</SectionName>
           <SectionName href="#about">Sobre mi</SectionName>
           <SectionName href="#skills">Habilidades</SectionName>
-          <SectionName>Proyectos</SectionName>
-          <SectionName>Contacto</SectionName>
+          <SectionName href="#projects">Proyectos</SectionName>
+          <SectionName href="#contact">Contacto</SectionName>
         </SectionMenu>
 
         <button onClick={toggle}>
@@ -41,11 +42,17 @@ export default function Home() {
       </Navbar>
 
       <MobileMenu display={display}>
-        <MobileElement>Home</MobileElement>
-        <MobileElement>About</MobileElement>
-        <MobileElement>Resume</MobileElement>
-        <MobileElement>Skills</MobileElement>
-        <MobileElement>Contact</MobileElement>
+        <MobileElement href="#home" onClick={showMenu}>
+          Home
+        </MobileElement>
+        <MobileElement href="#about" onClick={showMenu}>
+          About
+        </MobileElement>
+        <MobileElement href="#skills" onClick={showMenu}>
+          Resume
+        </MobileElement>
+        <MobileElement href="#proyects">Skills</MobileElement>
+        <MobileElement href="#contact">Contact</MobileElement>
       </MobileMenu>
 
       <Section id="home">
@@ -75,81 +82,83 @@ export default function Home() {
             distribuciones GNU/Linux con especial cariño a los escritorios con
             KDE.
           </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-8 gap-x-4">
-            <div>
-              <h1 className="text-xl font-bold pt-4 text-fountain-blue">
-                EDUCACION
-              </h1>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold pt-4 pb-1">
-                Ingenieria en Sistemas Computacionales
-              </h1>
-              <div className="divide-y divide-black dark:divide-white">
-                <div></div>
-                <div></div>
+          <div className=" p-4 w-full flex flex-row justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-8 gap-x-4">
+              <div>
+                <h1 className="text-xl font-bold pt-4 text-fountain-blue">
+                  EDUCACION
+                </h1>
               </div>
-              <h1 className="text-slate-600 dark:text-slate-300 pt-2">
-                Instituto Tecnologico de Oaxaca •{" "}
-                <small className="font-bold">Junio 2020</small>
-              </h1>
-              <small className="text-slate-600 dark:text-slate-300">
-                Ingenieria de Software con Tecnologias Emergentes
-              </small>
-            </div>
-            <div className="flex justify-center sm:justify-end">
-              <img src="./ito.svg" width={120} height={120} />
-            </div>
+              <div>
+                <h1 className="text-xl font-bold pt-4 pb-1">
+                  Ingenieria en Sistemas Computacionales
+                </h1>
+                <div className="divide-y divide-black dark:divide-white">
+                  <div></div>
+                  <div></div>
+                </div>
+                <h1 className="text-slate-600 dark:text-slate-300 pt-2">
+                  Instituto Tecnologico de Oaxaca •{" "}
+                  <small className="font-bold">Junio 2020</small>
+                </h1>
+                <small className="text-slate-600 dark:text-slate-300">
+                  Ingenieria de Software con Tecnologias Emergentes
+                </small>
+              </div>
+              <div className="flex justify-center sm:justify-end lg:justify-end lg:h-full lg:w-full">
+                <img src="./ito.svg" width={120} height={120} />
+              </div>
 
-            <div>
-              <h1 className="text-xl font-bold pt-4 text-fountain-blue">
-                EXPERIENCIA
-              </h1>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold pt-4 pb-1">
-                Desarrollador FullStack
-              </h1>
-              <div className="divide-y divide-black dark:divide-white">
-                <div></div>
-                <div></div>
+              <div>
+                <h1 className="text-xl font-bold pt-4 text-fountain-blue">
+                  EXPERIENCIA
+                </h1>
               </div>
-              <h1 className="text-slate-600 dark:text-slate-300 pt-2">
-                Instituto Tecnologico de Oaxaca •{" "}
-                <small className="font-bold">Marzo 2021</small>
-              </h1>
-              <small className="text-slate-600 dark:text-slate-300">
-                Residencia Profesional
-              </small>
-            </div>
-            <div className="flex justify-center sm:justify-end"></div>
+              <div>
+                <h1 className="text-xl font-bold pt-4 pb-1">
+                  Desarrollador FullStack
+                </h1>
+                <div className="divide-y divide-black dark:divide-white">
+                  <div></div>
+                  <div></div>
+                </div>
+                <h1 className="text-slate-600 dark:text-slate-300 pt-2">
+                  Instituto Tecnologico de Oaxaca •{" "}
+                  <small className="font-bold">Marzo 2021</small>
+                </h1>
+                <small className="text-slate-600 dark:text-slate-300">
+                  Residencia Profesional
+                </small>
+              </div>
+              <div className="flex justify-center sm:justify-end"></div>
 
-            <div></div>
-            <div>
-              <h1 className="text-xl font-bold pt-4 pb-1">
-                Desarrollador Java
-              </h1>
-              <div className="divide-y divide-black dark:divide-white">
-                <div></div>
-                <div></div>
+              <div></div>
+              <div>
+                <h1 className="text-xl font-bold pt-4 pb-1">
+                  Desarrollador Java
+                </h1>
+                <div className="divide-y divide-black dark:divide-white">
+                  <div></div>
+                  <div></div>
+                </div>
+                <h1 className="text-slate-600 dark:text-slate-300 pt-2">
+                  Aserradero de "Cordon Grande" •{" "}
+                  <small className="font-bold">Septiembre 2018</small>
+                </h1>
+                <small className="text-slate-600 dark:text-slate-300">
+                  Proyecto
+                </small>
               </div>
-              <h1 className="text-slate-600 dark:text-slate-300 pt-2">
-                Aserradero de "Cordon Grande" •{" "}
-                <small className="font-bold">Septiembre 2018</small>
-              </h1>
-              <small className="text-slate-600 dark:text-slate-300">
-                Proyecto
-              </small>
+              <div className="flex justify-center sm:justify-end"></div>
             </div>
-            <div className="flex justify-center sm:justify-end"></div>
           </div>
         </SectionContainer>
       </SectiionTwo>
 
-      <Section id="skills">
+      <SectionThree id="skills">
         <SectionContainer>
           <h1 className="text-2xl font-bold py-4">Skills:</h1>
-          <div className="grid grid-cols-10 gap-y-10 gap-x-5">
+          <div className="grid grid-cols-3 lg:grid-cols-6 xl:grid-cols-10 gap-y-10 gap-x-5">
             <Card src="./javascript.svg" label="JavaScript" />
             <Card src="./typescript-icon.svg" label="TypeScript" />
             <Card src="./nodejs-icon.svg" label="Node.js" />
@@ -171,7 +180,15 @@ export default function Home() {
             <Card src="./terminal.svg" label="Terminal" />
           </div>
         </SectionContainer>
-      </Section>
+      </SectionThree>
+
+      <SectiionTwo id="projects">
+        <SectionContainer></SectionContainer>
+      </SectiionTwo>
+
+      <SectionThree id="contact">
+        <SectionContainer></SectionContainer>
+      </SectionThree>
     </MainContainer>
   )
 }

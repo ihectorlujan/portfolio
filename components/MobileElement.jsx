@@ -1,7 +1,7 @@
 const MobileElement = (props) => {
   return (
     <h2 className="m-3 hover:font-extrabold w-1/4 text-center cursor-pointer">
-      {props.children}
+      <a {...props}>{props.children}</a>
     </h2>
   )
 }
