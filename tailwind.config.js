@@ -7,10 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "fountain-blue": "#54BAB9",
-        "desert-storm": "#FBF8F1",
-        "antique-white": "#F7ECDE",
-        bone: "#E9DAC1",
+        "columbia-blue": "#A2DBFA",
       },
     },
   },

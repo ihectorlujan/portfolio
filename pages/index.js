@@ -8,7 +8,7 @@ import MobileMenu from "../components/MobileMenu"
 import MobileElement from "../components/MobileElement"
 import useDisplay from "../hooks/useDisplay"
 import Section from "../components/Section"
-import SectiionTwo from "../components/SectiionTwo"
+import SectionTwo from "../components/SectionTwo"
 import SectionThree from "../components/SectionThree"
 import MainContainer from "../components/MainContainer"
 import SectionContainer from "../components/SectionContainer"
@@ -29,7 +29,6 @@ export default function Home() {
           <SectionName href="#home">Inicio</SectionName>
           <SectionName href="#about">Sobre mi</SectionName>
           <SectionName href="#skills">Habilidades</SectionName>
-          <SectionName href="#projects">Proyectos</SectionName>
           <SectionName href="#contact">Contacto</SectionName>
         </SectionMenu>
 
@@ -44,26 +43,24 @@ export default function Home() {
 
       <MobileMenu display={display}>
         <MobileElement href="#home" onClick={showMenu}>
-          Home
+          Inicio
         </MobileElement>
         <MobileElement href="#about" onClick={showMenu}>
-          About
+          Sobre mi
         </MobileElement>
-        <MobileElement href="#skills" onClick={showMenu}>
-          Resume
-        </MobileElement>
-        <MobileElement href="#proyects">Skills</MobileElement>
-        <MobileElement href="#contact">Contact</MobileElement>
+
+        <MobileElement href="#skills">Habilidades</MobileElement>
+        <MobileElement href="#contact">Contacto</MobileElement>
       </MobileMenu>
 
       <Section id="home">
         <SectionContainer>
-          <h1 className="text-6xl">¡Hey...! I&apos;m Hector Lujan</h1>
+          <h1 className="text-6xl">¡Hey...! Soy Héctor Luján</h1>
           <h1 className="p-4 text-sky-600 hover:font-bold">
             Frontend Junior Developer
           </h1>
           <div className="flex flex-row justify-center items-center py-10">
-            <h1>Lover of: </h1>
+            <h1>Amante de: </h1>
             <h1
               className="text-2xl font-bold pb-1 px-2 cursor-pointer"
               onClick={changeWord}
@@ -74,7 +71,7 @@ export default function Home() {
         </SectionContainer>
       </Section>
 
-      <SectiionTwo id="about">
+      <SectionTwo id="about">
         <SectionContainer>
           <h1 className="text-2xl font-bold py-4">Acerca de mi:</h1>
           <h1 className="text-base mb-10">
@@ -98,7 +95,7 @@ export default function Home() {
                   <div></div>
                   <div></div>
                 </div>
-                <h1 className="text-slate-600 dark:text-slate-300 pt-2">
+                <h1 className="text-sky-600 dark:text-columbia-blue pt-2">
                   Instituto Tecnologico de Oaxaca •{" "}
                   <small className="font-bold">Junio 2020</small>
                 </h1>
@@ -123,7 +120,7 @@ export default function Home() {
                   <div></div>
                   <div></div>
                 </div>
-                <h1 className="text-slate-600 dark:text-slate-300 pt-2">
+                <h1 className="text-sky-600 dark:text-columbia-blue pt-2">
                   Instituto Tecnologico de Oaxaca •{" "}
                   <small className="font-bold">Marzo 2021</small>
                 </h1>
@@ -142,7 +139,7 @@ export default function Home() {
                   <div></div>
                   <div></div>
                 </div>
-                <h1 className="text-slate-600 dark:text-slate-300 pt-2">
+                <h1 className="text-sky-600 dark:text-columbia-blue pt-2">
                   Aserradero de &quot;Cordon Grande&quot; •{" "}
                   <small className="font-bold">Septiembre 2018</small>
                 </h1>
@@ -154,12 +151,12 @@ export default function Home() {
             </div>
           </div>
         </SectionContainer>
-      </SectiionTwo>
+      </SectionTwo>
 
       <SectionThree id="skills">
         <SectionContainer>
-          <h1 className="text-2xl font-bold py-4">Skills:</h1>
-          <div className="grid grid-cols-3 lg:grid-cols-6 xl:grid-cols-10 gap-y-10 gap-x-5">
+          <h1 className="text-2xl font-bold my-10">Skills:</h1>
+          <div className="grid grid-cols-3 lg:grid-cols-6 xl:grid-cols-7 gap-y-10 lg:gap-y-20 gap-x-10 w-full">
             <Card src="/javascript.svg" label="JavaScript" />
             <Card src="/typescript-icon.svg" label="TypeScript" />
             <Card src="/nodejs-icon.svg" label="Node.js" />
@@ -182,10 +179,6 @@ export default function Home() {
           </div>
         </SectionContainer>
       </SectionThree>
-
-      <SectiionTwo id="projects">
-        <SectionContainer></SectionContainer>
-      </SectiionTwo>
 
       <SectionThree id="contact">
         <SectionContainer></SectionContainer>
