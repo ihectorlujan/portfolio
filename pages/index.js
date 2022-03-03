@@ -198,8 +198,8 @@ export default function Home() {
           <div className="w-full lg:h-1/2 rounded-md grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-4 py-4">
             <ContactCard icon={<IconUser />}>
               <a
-                href="https://www.linkedin.com/in/ihectorlujan
-"
+                href="https://www.linkedin.com/in/ihectorlujan"
+                target="_blank"
               >
                 LinkedIn
               </a>
@@ -210,7 +210,10 @@ export default function Home() {
             </ContactCard>
 
             <ContactCard icon={<IconDownload />}>
-              <a href="https://drive.google.com/file/d/1h68lqjfftOM_j-SW9Bn6CK0hzHI4kaVx/view?usp=sharing">
+              <a
+                href="https://drive.google.com/file/d/1h68lqjfftOM_j-SW9Bn6CK0hzHI4kaVx/view?usp=sharing"
+                target="_blank"
+              >
                 Resume
               </a>
             </ContactCard>
