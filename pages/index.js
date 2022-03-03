@@ -15,6 +15,11 @@ import SectionContainer from "../components/SectionContainer"
 import useWord from "../hooks/useWord"
 import Card from "../components/Card"
 import Image from "next/image"
+import ContactCard from "../components/ContactCard"
+import IconMail from "../components/IconMail"
+import IconPhone from "../components/IconPhone"
+import IconDownload from "../components/IconDownload"
+import IconUser from "../components/IconUser"
 
 export default function Home() {
   const [dark, toggle] = useDarkMode()
@@ -49,13 +54,17 @@ export default function Home() {
           Sobre mi
         </MobileElement>
 
-        <MobileElement href="#skills">Habilidades</MobileElement>
-        <MobileElement href="#contact">Contacto</MobileElement>
+        <MobileElement href="#skills" onClick={showMenu}>
+          Habilidades
+        </MobileElement>
+        <MobileElement href="#contact" onClick={showMenu}>
+          Contacto
+        </MobileElement>
       </MobileMenu>
 
       <Section id="home">
         <SectionContainer>
-          <h1 className="text-6xl">¡Hey...! Soy Héctor Luján</h1>
+          <h1 className="text-6xl">¡Hey...! Soy Hector Lujan</h1>
           <h1 className="p-4 text-sky-600 hover:font-bold">
             Frontend Junior Developer
           </h1>
@@ -155,7 +164,7 @@ export default function Home() {
 
       <SectionThree id="skills">
         <SectionContainer>
-          <h1 className="text-2xl font-bold my-10">Skills:</h1>
+          <h1 className="text-2xl font-bold my-10">Habilidades:</h1>
           <div className="grid grid-cols-3 lg:grid-cols-6 xl:grid-cols-7 gap-y-10 lg:gap-y-20 gap-x-10 w-full">
             <Card src="/javascript.svg" label="JavaScript" />
             <Card src="/typescript-icon.svg" label="TypeScript" />
@@ -180,9 +189,37 @@ export default function Home() {
         </SectionContainer>
       </SectionThree>
 
-      <SectionThree id="contact">
-        <SectionContainer></SectionContainer>
-      </SectionThree>
+      <SectionTwo id="contact">
+        <SectionContainer>
+          <h1 className="text-2xl font-bold py-4">Contacto:</h1>
+          <h1 className="text-base mb-10">
+            Puedes escoger las siguientes alternativas
+          </h1>
+          <div className="w-full lg:h-1/2 rounded-md grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-4 py-4">
+            <ContactCard icon={<IconUser />}>
+              <a
+                href="https://www.linkedin.com/in/ihectorlujan
+"
+              >
+                LinkedIn
+              </a>
+            </ContactCard>
+
+            <ContactCard icon={<IconMail />}>
+              <a href="mailto:ihectorlujan96@gmail.com">Email</a>
+            </ContactCard>
+
+            <ContactCard icon={<IconDownload />}>
+              <a href="https://drive.google.com/file/d/1h68lqjfftOM_j-SW9Bn6CK0hzHI4kaVx/view?usp=sharing">
+                Resume
+              </a>
+            </ContactCard>
+            <ContactCard icon={<IconPhone />}>
+              <a href="tel:+52 1 9534136144">Phone</a>
+            </ContactCard>
+          </div>
+        </SectionContainer>
+      </SectionTwo>
     </MainContainer>
   )
 }
