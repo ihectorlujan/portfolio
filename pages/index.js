@@ -215,6 +215,7 @@ export default function Home() {
               <a
                 href="https://www.linkedin.com/in/ihectorlujan"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 LinkedIn
               </a>
@@ -228,6 +229,7 @@ export default function Home() {
               <a
                 href="https://drive.google.com/file/d/1h68lqjfftOM_j-SW9Bn6CK0hzHI4kaVx/view?usp=sharing"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Resume
               </a>
