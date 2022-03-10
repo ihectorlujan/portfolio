@@ -20,6 +20,7 @@ import IconMail from "../components/IconMail"
 import IconPhone from "../components/IconPhone"
 import IconDownload from "../components/IconDownload"
 import IconUser from "../components/IconUser"
+import Head from "next/head"
 
 export default function Home() {
   const [dark, toggle] = useDarkMode()
@@ -28,6 +29,14 @@ export default function Home() {
 
   return (
     <MainContainer>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Spline+Sans&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <Navbar>
         <h1 className="font-extrabold">H.</h1>
         <SectionMenu>
@@ -64,18 +73,24 @@ export default function Home() {
 
       <Section id="home">
         <SectionContainer>
-          <h1 className="text-6xl">¡Hey...! Soy Hector Lujan</h1>
-          <h1 className="p-4 text-sky-600 hover:font-bold">
-            Frontend Junior Developer
-          </h1>
-          <div className="flex flex-row justify-center items-center py-10">
-            <h1>Amante de: </h1>
-            <h1
-              className="text-2xl font-bold pb-1 px-2 cursor-pointer"
-              onClick={changeWord}
-            >
-              {word}
-            </h1>
+          <div className="flex flex-row justify-around w-full">
+            <div>
+              <h1 className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 py-2">
+                ¡Hey...! Soy Hector Lujan
+              </h1>
+              <h1 className="p-4 text-sky-600 hover:font-bold">
+                Frontend Junior Developer
+              </h1>
+              <div className="flex flex-row justify-start items-center py-10">
+                <h1>Amante de: </h1>
+                <h1
+                  className="text-2xl font-bold pb-1 px-2 cursor-pointer"
+                  onClick={changeWord}
+                >
+                  {word}
+                </h1>
+              </div>
+            </div>
           </div>
         </SectionContainer>
       </Section>
@@ -218,7 +233,7 @@ export default function Home() {
               </a>
             </ContactCard>
             <ContactCard icon={<IconPhone />}>
-              <a href="tel:+52 1 9534136144">Phone</a>
+              <a href="tel:+52 1 9514136144">Phone</a>
             </ContactCard>
           </div>
         </SectionContainer>
