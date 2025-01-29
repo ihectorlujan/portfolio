@@ -1,6 +1,4 @@
-import React from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import styles from "@/styles/Shape.module.css";
 import ShapeDivider from "@/components/ShapeDivider";
 
 const Home = () => {
