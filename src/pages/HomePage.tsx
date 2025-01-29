@@ -4,7 +4,7 @@ import ShapeDivider from "@/components/ShapeDivider";
 const Home = () => {
   return (
     <>
-      <section className="h-screen flex flex-col justify-center">
+      <section id="home" className="h-screen flex flex-col justify-center">
         <ShapeDivider />
 
         <div className="flex flex-col md:flex-row items-center md:justify-center">
@@ -16,10 +16,10 @@ const Home = () => {
             <h2 className="font-semibold text-3xl md:text-4xl">Frontend Developer</h2>
           </span>
         </div>
-        <div className="flex flex-col items-center m-5">
+        <a className="flex flex-col items-center m-5" href="#experience">
           <ChevronDownIcon className="h-6 w-6 animate-bounce" />
           <p>Scroll for more!</p>
-        </div>
+        </a>
       </section>
     </>
   );
