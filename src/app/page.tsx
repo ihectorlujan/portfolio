@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import NavItem from "@/components/NavItem";
+import HomePage from "@/pages/HomePage";
 
 export default function Home() {
   return (
@@ -10,6 +11,8 @@ export default function Home() {
         <NavItem label="Skills" />
         <NavItem label="Contact" />
       </Navbar>
+      <HomePage />
+      <HomePage />
     </>
   );
 }
