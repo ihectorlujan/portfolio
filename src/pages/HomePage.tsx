@@ -1,5 +1,8 @@
+"use client";
+
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import ShapeDivider from "@/components/ShapeDivider";
+import scrollToSection from "@/helpers/scrollToSection";
 
 const Home = () => {
   return (
@@ -13,13 +16,18 @@ const Home = () => {
           </div>
           <span className="flex flex-col justify-center">
             <h1 className="font-bold text-4xl md:text-5xl">Hector Lujan</h1>
-            <h2 className="font-semibold text-3xl md:text-4xl">Frontend Developer</h2>
+            <h2 className="font-semibold text-3xl md:text-4xl">
+              Frontend Developer
+            </h2>
           </span>
         </div>
-        <a className="flex flex-col items-center m-5" href="#experience">
+        <span
+          className="flex flex-col items-center m-5"
+          onClick={() => scrollToSection("experience")}
+        >
           <ChevronDownIcon className="h-6 w-6 animate-bounce" />
           <p>Scroll for more!</p>
-        </a>
+        </span>
       </section>
     </>
   );
