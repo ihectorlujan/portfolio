@@ -7,7 +7,7 @@ interface Props {
 const NavItem: React.FC<Props> = ({ label }) => {
   return (
     <span className="cursor-pointer flex items-center py-1 px-2 hover:bg-gray-200 hover:rounded-full ">
-      <a className="font-sans font-semibold text-md mx-1">{label}</a>
+      <p className="font-semibold text-md mx-1">{label}</p>
     </span>
   );
 };

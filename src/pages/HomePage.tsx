@@ -7,7 +7,7 @@ const Home = () => {
       <section className="h-screen flex flex-col justify-end">
           <ShapeDivider />
           <div className="flex flex-col items-center m-5">
-            <ChevronDownIcon className="h-6 w-6" />
+            <ChevronDownIcon className="h-6 w-6 animate-bounce" />
             <p>Scroll for more!</p>
           </div>
       </section>
