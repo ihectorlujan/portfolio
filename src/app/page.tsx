@@ -12,7 +12,6 @@ export default function Home() {
         <NavItem label="Contact" />
       </Navbar>
       <HomePage />
-      <HomePage />
     </>
   );
 }

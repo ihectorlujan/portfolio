@@ -4,12 +4,12 @@ import ShapeDivider from "@/components/ShapeDivider";
 const Home = () => {
   return (
     <>
-      <section className="h-screen">
-        <ShapeDivider />
-        <div className="flex flex-col items-center m-5">
-          <ChevronDownIcon className="h-6 w-6" />
-          <p>Scroll for more!</p>
-        </div>
+      <section className="h-screen flex flex-col justify-end">
+          <ShapeDivider />
+          <div className="flex flex-col items-center m-5">
+            <ChevronDownIcon className="h-6 w-6" />
+            <p>Scroll for more!</p>
+          </div>
       </section>
     </>
   );
