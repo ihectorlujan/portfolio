@@ -8,13 +8,13 @@ const ExperiencePage = () => {
     <>
       <section
         id="experience"
-        className="h-screen p-20 px-6 md:p-20"
+        className="h-auto md:h-screen p-20 px-6 md:p-20"
       >
         <Title label="Experience" />
         <div className="flex flex-col h-full justify-center">
           <div className="flex flex-col md:flex-row justify-evenly">
             <span>
-              <Card className="min-w-[400px] h-auto">
+              <Card className="min-w-[350px] h-auto">
                 <ExperienceTemplate
                   title="Bachelor's Degree"
                   dateRange="2015 - 2021"
@@ -25,7 +25,7 @@ const ExperiencePage = () => {
               </Card>
             </span>
             <span>
-              <Card className="min-w-[400px] h-auto">
+              <Card className="min-w-[350px] h-auto">
                 <ExperienceTemplate
                   icon
                   title="Software Development"
@@ -36,7 +36,7 @@ const ExperiencePage = () => {
                   color="text-blue-500"
                 />
               </Card>
-              <Card className="min-w-[400px] h-auto">
+              <Card className="min-w-[350px] h-auto">
                 <ExperienceTemplate
                   icon
                   title="Software Development"
@@ -47,7 +47,7 @@ const ExperiencePage = () => {
                   color="text-emerald-500"
                 />
               </Card>
-              <Card className="min-w-[400px] h-auto">
+              <Card className="min-w-[350px] h-auto">
                 <ExperienceTemplate
                   icon
                   title="Software Development"
@@ -58,7 +58,7 @@ const ExperiencePage = () => {
                   color="text-amber-500"
                 />
               </Card>
-              <Card className="min-w-[400px] h-auto">
+              <Card className="min-w-[350px] h-auto">
                 <ExperienceTemplate
                   icon
                   title="Software Development"
