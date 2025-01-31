@@ -1,4 +1,4 @@
-import { BookOpenIcon, BriefcaseIcon } from "@heroicons/react/24/solid";
+import { BookOpenIcon, CommandLineIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
 interface Props {
@@ -8,6 +8,7 @@ interface Props {
   field: string;
   organization: string;
   details: string;
+  color?: string;
 }
 
 const ExperienceTemplate: React.FC<Props> = ({
@@ -17,12 +18,13 @@ const ExperienceTemplate: React.FC<Props> = ({
   field,
   organization,
   details,
+  color,
 }) => {
   return (
     <>
       <div className="flex flex-row items-center">
         {icon ? (
-          <BriefcaseIcon className="h-6 w-6 text-gray-600" />
+          <CommandLineIcon className="h-6 w-6 text-gray-600" />
         ) : (
           <BookOpenIcon className="h-6 w-6 text-gray-600" />
         )}
@@ -33,7 +35,7 @@ const ExperienceTemplate: React.FC<Props> = ({
       </div>
 
       <div className="mx-5">
-        <p className="font-semibold text-[#1f1e2c] m-2 opacity-95">
+        <p className={`font-semibold m-2 opacity-95 ${color}`}>
           {field}
         </p>
         <p className="text-sm font-semibold text-[#1f1e2c] m-2 opacity-85">

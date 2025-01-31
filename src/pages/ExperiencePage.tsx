@@ -28,41 +28,45 @@ const ExperiencePage = () => {
               <Card className="min-w-[400px] h-auto">
                 <ExperienceTemplate
                   icon
-                  title=""
-                  dateRange="11/2024 – Present"
-                  field="Frontend Developer"
+                  title="Software Development"
+                  dateRange="11.2024 – Present"
+                  field="React Frontend Developer"
                   organization="Freelancer"
                   details=""
+                  color="text-blue-500"
                 />
               </Card>
               <Card className="min-w-[400px] h-auto">
                 <ExperienceTemplate
                   icon
-                  title=""
-                  dateRange="06/2022 – 08/2024"
-                  field="Frontend Developer"
+                  title="Software Development"
+                  dateRange="06.2022 – 08.2024"
+                  field="Vue.js Frontend Developer"
                   organization="Azit Developers"
                   details=""
+                  color="text-emerald-500"
                 />
               </Card>
               <Card className="min-w-[400px] h-auto">
                 <ExperienceTemplate
                   icon
-                  title=""
-                  dateRange="10/2020 – 03/2021"
-                  field="Fullstack Developer"
+                  title="Software Development"
+                  dateRange="10.2020 – 03.2021"
+                  field="JavaScript Fullstack Developer"
                   organization="Instituto Tecnológico de Oaxaca"
                   details=""
+                  color="text-amber-500"
                 />
               </Card>
               <Card className="min-w-[400px] h-auto">
                 <ExperienceTemplate
                   icon
-                  title=""
-                  dateRange="07/2018 - 09/2018"
-                  field="Fullstack Developer"
+                  title="Software Development"
+                  dateRange="07.2018 - 09.2018"
+                  field="Java Fullstack Developer"
                   organization="Aserradero Cordon Grande"
                   details=""
+                  color="text-red-500"
                 />
               </Card>
             </span>
