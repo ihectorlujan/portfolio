@@ -3,7 +3,7 @@ const scrollToSection = (id: string) => {
   
   if (section) {
     window.scrollTo({
-      top: section.offsetTop - 50,
+      top: section.offsetTop,
       behavior: "smooth",
     });
   }

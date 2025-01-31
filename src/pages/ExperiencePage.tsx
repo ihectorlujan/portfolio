@@ -8,7 +8,7 @@ const ExperiencePage = () => {
     <>
       <section
         id="experience"
-        className="h-screen py-10 px-6 md:p-20  border-4"
+        className="h-screen p-20 px-6 md:p-20"
       >
         <Title label="Experience" />
         <div className="flex flex-col h-full justify-center">
