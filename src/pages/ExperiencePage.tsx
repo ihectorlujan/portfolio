@@ -6,7 +6,7 @@ import React from "react";
 const ExperiencePage = () => {
   return (
     <>
-      <section id="experience" className="h-auto md:h-screen p-20 px-6 md:p-20">
+      <section id="experience" className="h-auto md:min-h-screen p-20 px-6 md:p-20">
         <Title label="Experience" />
         <div className="flex flex-col h-full justify-center">
           <div className="flex flex-col lg:flex-row justify-evenly">
