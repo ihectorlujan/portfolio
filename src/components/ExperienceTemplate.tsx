@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { BookOpenIcon, CommandLineIcon, ArrowDownIcon, ArrowUpIcon } from "@heroicons/react/24/solid";
 
 interface Props {
@@ -13,6 +13,8 @@ interface Props {
   color?: string;
   toggle?: boolean;
   activities?: string[];
+  isActive?: boolean;
+  onToggle?: () => void;
 }
 
 const ExperienceTemplate: React.FC<Props> = ({
@@ -25,9 +27,9 @@ const ExperienceTemplate: React.FC<Props> = ({
   color,
   toggle,
   activities,
+  isActive,
+  onToggle,
 }) => {
-  const [toggled, setToggled] = useState(false);
-
   return (
     <>
       <div className="flex flex-row items-center">
@@ -48,7 +50,7 @@ const ExperienceTemplate: React.FC<Props> = ({
 
       <div
         className={`transition-all duration-[0.4s] linear overflow-hidden px-4 py-1 ${
-          toggled ? "max-h-[500px]" : "max-h-0"
+          isActive ? "max-h-[500px]" : "max-h-0"
         }`}
       >
         <ul>
@@ -62,15 +64,15 @@ const ExperienceTemplate: React.FC<Props> = ({
 
       {toggle && (
         <span className="flex justify-end">
-          {toggled ? (
+          {isActive ? (
             <ArrowUpIcon
               className={`h-4 w-4 ${color} font-bold animate-bounce`}
-              onClick={() => setToggled(!toggled)}
+              onClick={onToggle}
             />
           ) : (
             <ArrowDownIcon
               className={`h-4 w-4 ${color} font-bold animate-bounce`}
-              onClick={() => setToggled(!toggled)}
+              onClick={onToggle}
             />
           )}
         </span>
