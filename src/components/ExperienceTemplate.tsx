@@ -1,5 +1,7 @@
-import { BookOpenIcon, CommandLineIcon } from "@heroicons/react/24/solid";
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import { BookOpenIcon, CommandLineIcon, ArrowDownIcon, ArrowUpIcon } from "@heroicons/react/24/solid";
 
 interface Props {
   icon?: boolean;
@@ -9,6 +11,8 @@ interface Props {
   organization: string;
   details: string;
   color?: string;
+  toggle?: boolean;
+  activities?: string[];
 }
 
 const ExperienceTemplate: React.FC<Props> = ({
@@ -19,7 +23,11 @@ const ExperienceTemplate: React.FC<Props> = ({
   organization,
   details,
   color,
+  toggle,
+  activities,
 }) => {
+  const [toggled, setToggled] = useState(false);
+
   return (
     <>
       <div className="flex flex-row items-center">
@@ -29,22 +37,44 @@ const ExperienceTemplate: React.FC<Props> = ({
           <BookOpenIcon className="h-6 w-6 text-gray-600" />
         )}
         <p className="font-semibold text-[#1f1e2c] m-2 opacity-85">{title}</p>
-        <p className="text-sm font-semibold text-[#1f1e2c] m-2 opacity-55">
-          {dateRange}
-        </p>
+        <p className="text-sm font-semibold text-[#1f1e2c] m-2 opacity-55">{dateRange}</p>
       </div>
 
       <div className="mx-5">
-        <p className={`font-semibold m-2 opacity-95 ${color}`}>
-          {field}
-        </p>
-        <p className="text-sm font-semibold text-[#1f1e2c] m-2 opacity-85">
-          {organization}
-        </p>
-        <p className="text-sm font-semibold text-[#1f1e2c] m-2 opacity-75">
-          {details}
-        </p>
+        <p className={`font-semibold m-2 opacity-95 ${color}`}>{field}</p>
+        <p className="text-sm font-semibold text-[#1f1e2c] m-2 opacity-85">{organization}</p>
+        <p className="text-sm font-semibold text-[#1f1e2c] m-2 opacity-75">{details}</p>
       </div>
+
+      <div
+        className={`transition-all duration-[0.4s] linear overflow-hidden px-4 py-1 ${
+          toggled ? "max-h-[500px]" : "max-h-0"
+        }`}
+      >
+        <ul>
+          {activities?.map((element, index) => (
+            <li className="text-sm font-semibold text-[#1f1e2c] m-2 opacity-75" key={index}>
+              {'>'} {element}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {toggle && (
+        <span className="flex justify-end">
+          {toggled ? (
+            <ArrowUpIcon
+              className={`h-4 w-4 ${color} font-bold animate-bounce`}
+              onClick={() => setToggled(!toggled)}
+            />
+          ) : (
+            <ArrowDownIcon
+              className={`h-4 w-4 ${color} font-bold animate-bounce`}
+              onClick={() => setToggled(!toggled)}
+            />
+          )}
+        </span>
+      )}
     </>
   );
 };
