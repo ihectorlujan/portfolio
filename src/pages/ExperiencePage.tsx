@@ -1,7 +1,7 @@
 "use client";
 
 import ExperienceTemplate from "@/components/ExperienceTemplate";
-import experiences from "@/helpers/experienceList.json";
+import experiences from "@/data/experienceList.json";
 import React, { useState } from "react";
 import Title from "@/components/Title";
 import Card from "@/components/Card";
@@ -28,12 +28,20 @@ const ExperiencePage = () => {
             </span>
             <span>
               {experiences.map((experience, index) => (
-                <Card className="min-w-[350px] h-auto lg:min-w-[450px] lg:max-w-[450px]">
+                <Card
+                  key={index}
+                  className="min-w-[350px] h-auto lg:min-w-[450px] lg:max-w-[450px]"
+                >
                   <ExperienceTemplate
                     toggle
                     icon
-                    key={index}
-                    {...experience}
+                    title={experience.title}
+                    dateRange={experience.dateRange}
+                    field={experience.field}
+                    organization={experience.organization}
+                    details={experience.details}
+                    activities={experience.activities}
+                    color={experience.color}
                     isActive={index === activeIndex}
                     onToggle={() => setActiveIndex(index === activeIndex ? null : index)}
                   />
