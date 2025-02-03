@@ -14,6 +14,7 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({ src, alt, className, init
   useEffect(() => {
     const element = imageRef.current;
     const angle = initialAngle !== undefined ? initialAngle : Math.random() * 2 * Math.PI; // Ángulo inicial aleatorio
+    const radiusX = 30; // Radio horizontal de la elipse
     const radiusY = 30; // Radio vertical de la elipse
     const animationDuration = 10; // Duración de la animación en segundos
 
