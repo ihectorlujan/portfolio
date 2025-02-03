@@ -1,7 +1,8 @@
-import Navbar from "@/components/Navbar";
+import ExperiencePage from "@/pages/ExperiencePage";
+import SkillsPage from "@/pages/SkillsPage";
 import NavItem from "@/components/NavItem";
+import Navbar from "@/components/Navbar";
 import HomePage from "@/pages/HomePage";
-import ExperiencePage from "../pages/ExperiencePage";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       </Navbar>
       <HomePage />
       <ExperiencePage />
+      <SkillsPage />
     </>
   );
 }
